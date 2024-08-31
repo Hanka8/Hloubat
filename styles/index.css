@@ -250,4 +250,95 @@ blockquote {
 
 .quote__author {
   margin-top: 10px;
+}
+
+.meditation {
+  background-image: url("../assets/bonfire.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.meditation-container {
+  background-image: url("../assets/blue-bg.webp");
+  width: 60%;
+  padding-inline: 130px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top-right-radius: 85px;
+  border-bottom-right-radius: 85px;
+  position: relative;
+}
+
+.meditation-header {
+  font-size: 96px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.carousel-header {
+  font-size: 46px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.carousel-text {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 23px;
+}
+
+.carousel-hr {
+  color: #fff;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%; /* Ensure images fit within the container */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.carousel-button {
+  height: 83px;
+  width: 21px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  right: 20px;
+  background-color: transparent;
+  background-image: url("../assets/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 300ms ease;
+}
+.carousel-button.prev {
+  background-image: url("../assets/arrow-left.svg");
+}
+.carousel-button:hover {
+  transform: translateY(-50%) scale(1.4);
 }/*# sourceMappingURL=index.css.map */
