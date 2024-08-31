@@ -1,5 +1,6 @@
 $font-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 $margin-inline: 130px;
+$margin-inline-sm: 20px;
 
 * {
   margin: 0;
@@ -16,7 +17,21 @@ li {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ul,
+ol,
+button,
+input,
+textarea,
+blockquote {
   font-family: "Oswald", sans-serif;
   color: #fff;
 }
@@ -36,12 +51,24 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea {
 // header
 .header {
   min-height: 100vh;
-  background-image: url("../assets/header-bg.png");
+  background-image: url("../assets/header-bg-xl.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: $margin-inline;
-}
+  position: relative;
 
+  @media (min-aspect-ratio: 154/100) and (max-aspect-ratio: 172/100) {
+    background-image: url("../assets/header-bg-lg.png");
+  }
+
+  @media (min-aspect-ratio: 75/100) and (max-aspect-ratio: 154/100) {
+    background-image: url("../assets/header-bg-md.png");
+  }
+
+  @media (max-aspect-ratio: 75/100) {
+    background-image: url("../assets/header-bg-sm.png");
+  }
+}
 
 .header__logo {
   background-image: url("../assets/logo.svg");
@@ -52,27 +79,83 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea {
   background-size: cover;
   position: fixed;
   left: 55px;
-  top: 64px;
+  top: 32px;
   z-index: 9;
 
   &:hover {
     background-image: url("../assets/logo-hover.svg");
   }
+
+  @media screen and (max-width: 568px) {
+    left: $margin-inline-sm;
+  }
 }
 
-.header__link {
-  font-size: 24px;
-  font-weight: 300;
-  cursor: pointer;
-  position: absolute;
-  right: 39px;
-  top: 72px;
-  font-size: 36px;
+.header__hamburger {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  top: 36px;
+  right: 55px;
   z-index: 9;
-  text-decoration: none;
+  position: fixed;
+  cursor: pointer;
+  transform: rotate(360deg);
+  transition: 150ms ease;
 
-  &:hover {
-    text-decoration: underline;
+  &.close {
+    transform: rotate(0deg);
+    transition: 0ms;
+  }
+
+  @media screen and (max-width: 568px) {
+    right: $margin-inline-sm;
+  }
+}
+
+.hamburger__line {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 10px 0;
+  border-radius: 20px;
+
+  &.line-one.close {
+    transform: rotate(45deg);
+    transform-origin: 7px 0;
+    transition: 150ms ease;
+  }
+
+  &.line-two.close {
+    background-color: transparent;
+  }
+
+  &.line-three.close {
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    transition: 150ms ease;
+  }
+}
+
+.header__nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  transition: 300ms ease;
+  width: fit-content;
+  padding: 2rem;
+  padding-top: 20vh;
+
+  &.open {
+    display: block;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.089);
+    backdrop-filter: blur(10px);
+    z-index: 8;
+
+    transition: 150ms ease;
   }
 }
 
@@ -80,7 +163,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea {
   font-size: 110px;
   font-weight: 700;
   filter: drop-shadow($font-shadow);
-  padding-top: 31vh;
+  padding-top: 21%;
   padding-bottom: 8vh;
 }
 
@@ -95,4 +178,11 @@ h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, button, input, textarea {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.quote {
+  padding: $margin-inline;
+  background-image: url("../assets/orange-bg.webp");
+  font-size: 64px;
+  font-weight: 400;
 }

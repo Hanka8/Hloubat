@@ -16,16 +16,12 @@
     <script src="/index.js" defer></script>
     <header class="header">
       <button class="header__logo" aria-label="back to top"></button>
-      <a
-        href="#"
-        id="rezervacni-system"
-        class="header__link"
-        data-custom="hideOnMobile"
-        >
-        Rezervační systém
-    </a>
-      <h1 class="header__title">HLOUB.AT</h1>
-      <nav class="header__nav">
+      <button href="#" class="header__hamburger" data-custom="hamburgerBtn">
+        <span class="hamburger__line line-one"></span>
+        <span class="hamburger__line line-two"></span>
+        <span class="hamburger__line line-three"></span>
+      </button>
+      <nav class="header__nav" data-custom="navMenu">
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a href="#meditace" class="header__nav-link">Meditace</a>
@@ -39,16 +35,19 @@
           <li class="header__nav-item">
             <a href="#kontakt" class="header__nav-link">Kontakt</a>
           </li>
+          <li class="header__nav-item">
+            <a href="#kontakt" class="header__nav-link">Rezervační systém</a>
+          </li>
         </ul>
       </nav>
+      <h1 class="header__title">HLOUB.AT</h1>
     </header>
 
     <main>
-      <section id="hero">
-        <div class="hero-image"></div>
-        <blockquote>
+      <section id="hero" class="quote">
+        <blockquote class="quote__blockquote">
           "Meditace není útěk od reality, je to setkání s realitou." - Thich
-          Nhat Hanh
+          Nhất Hanh
         </blockquote>
       </section>
 
@@ -85,6 +84,5 @@
     <footer>
       <p>&copy; 2024 HLOUB.AT. Všechna práva vyhrazena.</p>
     </footer>
-
   </body>
 </html>
