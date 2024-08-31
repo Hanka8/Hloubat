@@ -46,7 +46,7 @@ blockquote {
 
 .header {
   min-height: 100vh;
-  background-image: url("../assets/header-bg-xl.png");
+  background-image: url("../assets/header-bg-xxl.webp");
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: 130px;
@@ -54,17 +54,22 @@ blockquote {
 }
 @media (min-aspect-ratio: 154/100) and (max-aspect-ratio: 172/100) {
   .header {
-    background-image: url("../assets/header-bg-lg.png");
+    background-image: url("../assets/header-bg-xl.webp");
   }
 }
-@media (min-aspect-ratio: 75/100) and (max-aspect-ratio: 154/100) {
+@media (min-aspect-ratio: 95/100) and (max-aspect-ratio: 154/100) {
   .header {
-    background-image: url("../assets/header-bg-md.png");
+    background-image: url("../assets/header-bg-lg.webp");
   }
 }
-@media (max-aspect-ratio: 75/100) {
+@media (min-aspect-ratio: 60/100) and (max-aspect-ratio: 95/100) {
   .header {
-    background-image: url("../assets/header-bg-sm.png");
+    background-image: url("../assets/header-bg-md.webp");
+  }
+}
+@media (max-aspect-ratio: 60/100) {
+  .header {
+    background-image: url("../assets/header-bg-sm.webp");
   }
 }
 
@@ -144,6 +149,11 @@ blockquote {
   padding: 2rem;
   padding-top: 20vh;
 }
+@media screen and (max-width: 568px) {
+  .header__nav {
+    width: 100%;
+  }
+}
 .header__nav.open {
   display: block;
   right: 0;
@@ -159,7 +169,43 @@ blockquote {
   font-weight: 700;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   padding-top: 21%;
-  padding-bottom: 8vh;
+  padding-bottom: 10%;
+}
+@media (min-aspect-ratio: 154/100) and (max-aspect-ratio: 172/100) {
+  .header__title {
+    font-size: 90px;
+  }
+}
+@media (min-aspect-ratio: 95/100) and (max-aspect-ratio: 154/100) {
+  .header__title {
+    padding-top: 30%;
+    font-size: 70px;
+  }
+}
+@media (min-aspect-ratio: 60/100) and (max-aspect-ratio: 95/100) {
+  .header__title {
+    font-size: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding-bottom: 20%;
+  }
+}
+@media (max-aspect-ratio: 60/100) {
+  .header__title {
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding-bottom: 35%;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .header__title {
+    font-size: 50px;
+  }
 }
 
 .header__nav-link {
@@ -173,10 +219,35 @@ blockquote {
 .header__nav-link:hover {
   text-decoration: underline;
 }
+@media (max-height: 500px) and (orientation: landscape) {
+  .header__nav-link {
+    font-size: 24px;
+  }
+}
 
 .quote {
   padding: 130px;
   background-image: url("../assets/orange-bg.webp");
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 300;
+}
+@media screen and (max-width: 1280px) {
+  .quote {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .quote {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .quote {
+    font-size: 32px;
+    padding-inline: 20px;
+  }
+}
+
+.quote__author {
+  margin-top: 10px;
 }/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,6 @@
 $font-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 $margin-inline: 130px;
+$margin-inline-md: 50px;
 $margin-inline-sm: 20px;
 
 * {
@@ -48,25 +49,30 @@ blockquote {
   font-weight: 600;
 }
 
-// header
+// HEADER
+
 .header {
   min-height: 100vh;
-  background-image: url("../assets/header-bg-xl.png");
+  background-image: url("../assets/header-bg-xxl.webp");
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: $margin-inline;
   position: relative;
 
   @media (min-aspect-ratio: 154/100) and (max-aspect-ratio: 172/100) {
-    background-image: url("../assets/header-bg-lg.png");
+    background-image: url("../assets/header-bg-xl.webp");
   }
 
-  @media (min-aspect-ratio: 75/100) and (max-aspect-ratio: 154/100) {
-    background-image: url("../assets/header-bg-md.png");
+  @media (min-aspect-ratio: 95/100) and (max-aspect-ratio: 154/100) {
+    background-image: url("../assets/header-bg-lg.webp");
   }
 
-  @media (max-aspect-ratio: 75/100) {
-    background-image: url("../assets/header-bg-sm.png");
+  @media (min-aspect-ratio: 60/100) and (max-aspect-ratio: 95/100) {
+    background-image: url("../assets/header-bg-md.webp");
+  }
+
+  @media (max-aspect-ratio: 60/100) {
+    background-image: url("../assets/header-bg-sm.webp");
   }
 }
 
@@ -148,13 +154,16 @@ blockquote {
   padding: 2rem;
   padding-top: 20vh;
 
+  @media screen and (max-width: 568px) {
+    width: 100%;
+  }
+
   &.open {
     display: block;
     right: 0;
     background-color: rgba(0, 0, 0, 0.089);
     backdrop-filter: blur(10px);
     z-index: 8;
-
     transition: 150ms ease;
   }
 }
@@ -164,7 +173,38 @@ blockquote {
   font-weight: 700;
   filter: drop-shadow($font-shadow);
   padding-top: 21%;
-  padding-bottom: 8vh;
+  padding-bottom: 10%;
+
+  @media (min-aspect-ratio: 154/100) and (max-aspect-ratio: 172/100) {
+    font-size: 90px;
+  }
+
+  @media (min-aspect-ratio: 95/100) and (max-aspect-ratio: 154/100) {
+    padding-top: 30%;
+    font-size: 70px;
+  }
+
+  @media (min-aspect-ratio: 60/100) and (max-aspect-ratio: 95/100) {
+    font-size: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding-bottom: 20%;
+  }
+
+  @media (max-aspect-ratio: 60/100) {
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding-bottom: 35%;
+  }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+    font-size: 50px;
+  }
 }
 
 .header__nav-link {
@@ -178,11 +218,35 @@ blockquote {
   &:hover {
     text-decoration: underline;
   }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+    font-size: 24px;
+  }
 }
+
+// MAIN
 
 .quote {
   padding: $margin-inline;
   background-image: url("../assets/orange-bg.webp");
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 300;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 48px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    padding: $margin-inline-md;
+  }
+
+  @media screen and (max-width: 590px) {
+    font-size: 32px;
+    padding-inline: $margin-inline-sm;
+  }
 }
+
+.quote__author {
+  margin-top: 10px;
+}
+
