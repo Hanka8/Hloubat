@@ -42,6 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCarousel();
 });
 
+function toggleAccordion(event) {
+  const header = event.currentTarget;
+  const content = header.nextElementSibling;
+  const allContents = document.querySelectorAll(".accordion-content");
+
+  allContents.forEach((item) => {
+    if (item !== content) {
+      item.style.maxHeight = null;
+    }
+  });
+
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+
+
 // REMOVE THE FOLLOWING CODE AFTER TESTING
 
 // console.log window screen aspect ratio
