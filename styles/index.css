@@ -22,9 +22,6 @@ li {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
 a,
 li,
@@ -102,15 +99,15 @@ table {
   margin: 10px 0;
   border-radius: 20px;
 }
-.hamburger__line.line-one.close {
+.hamburger__line--line-one.close {
   transform: rotate(45deg);
   transform-origin: 7px 0;
   transition: 150ms ease;
 }
-.hamburger__line.line-two.close {
+.hamburger__line--line-two.close {
   background-color: transparent;
 }
-.hamburger__line.line-three.close {
+.hamburger__line--line-three.close {
   transform: rotate(-45deg);
   transform-origin: 0 0;
   transition: 150ms ease;
@@ -127,6 +124,15 @@ table {
   padding: 2rem;
   padding-top: 20vh;
 }
+.nav__menu.open {
+  display: block;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.089);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 8;
+  transition: 150ms ease;
+}
 @media screen and (min-width: 1920px) {
   .nav__menu {
     right: 0;
@@ -137,15 +143,6 @@ table {
   .nav__menu {
     width: 100%;
   }
-}
-.nav__menu.open {
-  display: block;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.089);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  z-index: 8;
-  transition: 150ms ease;
 }
 
 .menu__nav-link {
@@ -278,7 +275,7 @@ table {
   }
 }
 
-.meditation-container {
+.meditation__container {
   background-image: url("../assets/blue-bg.webp");
   width: 60%;
   padding-inline: 130px;
@@ -290,7 +287,7 @@ table {
   min-height: 842px;
 }
 @media screen and (max-width: 1280px) {
-  .meditation-container {
+  .meditation__container {
     width: 100%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -299,29 +296,29 @@ table {
   }
 }
 @media screen and (max-width: 1080px) {
-  .meditation-container {
+  .meditation__container {
     padding-inline: 50px;
   }
 }
 @media screen and (max-width: 590px) {
-  .meditation-container {
+  .meditation__container {
     padding-inline: 20px;
   }
 }
 
-.meditation-header {
+.meditation__heading {
   font-size: 70px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 @media screen and (max-width: 1280px) {
-  .meditation-header {
+  .meditation__heading {
     font-size: 50px;
   }
 }
 
-.carousel {
+.meditation__carousel {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -329,44 +326,86 @@ table {
   height: fit-content;
 }
 
-.carousel-header {
+.meditation__inner {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.meditation__slide {
+  min-width: 100%;
+}
+
+.meditation__slide-heading {
   font-size: 36px;
   font-weight: 500;
   margin-bottom: 8px;
 }
 @media screen and (max-width: 1280px) {
-  .carousel-header {
+  .meditation__slide-heading {
     font-size: 24px;
   }
 }
 
-.carousel-text {
+.meditation__slide-text {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 1280px) {
-  .carousel-text {
+  .meditation__slide-text {
     font-size: 18px;
   }
 }
 
-.carousel-hr {
+.meditation__hr {
   color: #fff;
   background-color: #fff;
   height: 3px;
 }
 
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+.meditation__accordion {
+  width: 100%;
+  font-size: 20px;
 }
 
-.carousel-slide {
-  min-width: 100%;
+.meditation__accordion-item {
+  margin-bottom: 20px;
+  border-radius: 30px;
 }
 
-.carousel-button {
+.meditation__accordion-heading {
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s;
+  background-color: #0d4551;
+  border-bottom: 3px solid #ddd;
+  border-top-right-radius: 30px;
+}
+.meditation__accordion-heading:hover {
+  background-color: rgba(4, 30, 36, 0.7058823529);
+}
+
+.meditation__accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #0d4551;
+  font-weight: 300;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.meditation__accordion-item p {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1280px) {
+  .meditation__accordion-item p {
+    font-size: 18px;
+  }
+}
+
+.meditation__carousel-button {
   height: 83px;
   width: 21px;
   position: absolute;
@@ -382,70 +421,28 @@ table {
   background-size: cover;
   transition: 300ms ease;
 }
-.carousel-button.prev {
+.meditation__carousel-button.prev {
   background-image: url("../assets/arrow-left.svg");
 }
-.carousel-button:hover {
+.meditation__carousel-button:hover {
   transform: translateY(-50%) scale(1.4);
 }
 
-.meditation-image {
+.meditation__image {
   display: block;
   width: 100%;
   height: 100%;
   background-image: url("../assets/orange-bg.webp");
 }
-.meditation-image .image {
+.meditation__image .image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 1280px) {
-  .meditation-image {
+  .meditation__image {
     display: none;
-  }
-}
-
-.accordion {
-  width: 100%;
-  font-size: 20px;
-}
-
-.accordion-item {
-  margin-bottom: 20px;
-  border-radius: 30px;
-}
-
-.accordion-header {
-  cursor: pointer;
-  padding: 10px;
-  transition: background-color 0.3s;
-  background-color: #0d4551;
-  border-bottom: 3px solid #ddd;
-  border-top-right-radius: 30px;
-}
-.accordion-header:hover {
-  background-color: rgba(4, 30, 36, 0.7058823529);
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: #0d4551;
-  font-weight: 300;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-.accordion-content p {
-  padding: 10px;
-  margin-bottom: 10px;
-}
-@media screen and (max-width: 1280px) {
-  .accordion-content p {
-    font-size: 18px;
   }
 }
 
@@ -524,7 +521,12 @@ table {
 }
 
 @media screen and (max-width: 768px) {
-  .events__table, .events__thead, .events__tbody, .events__header, .events__cell, .events__row {
+  .events__table,
+  .events__thead,
+  .events__tbody,
+  .events__header,
+  .events__cell,
+  .events__row {
     display: block;
   }
   .events__thead {
@@ -556,7 +558,7 @@ table {
   }
 }
 .events__button {
-  background-color: #BF5841;
+  background-color: #bf5841;
   border: 3px solid #fff;
   border-radius: 20px;
   color: #fff;
@@ -570,7 +572,7 @@ table {
 }
 .events__button:hover {
   background-color: #fff;
-  color: #BF5841;
+  color: #bf5841;
   transition: 300ms ease;
 }
 .events__button:active {

@@ -19,7 +19,7 @@ hamburgerBtn.addEventListener("click", showOrHideMenu);
 document.addEventListener("DOMContentLoaded", () => {
   let currentSlide = 0;
   const totalSlides = 2;
-  const carouselInner = document.querySelector(".carousel-inner");
+  const carouselInner = document.querySelector('[data-custom="carouselInner"]');
 
   if (!carouselInner) {
     console.error("Carousel inner container not found.");
@@ -45,7 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleAccordion(event) {
   const header = event.currentTarget;
   const content = header.nextElementSibling;
-  const allContents = document.querySelectorAll(".accordion-content");
+  const allContents = document.querySelectorAll(
+    '[data-custom="accordionContent"]'
+  );
 
   allContents.forEach((item) => {
     if (item !== content) {
