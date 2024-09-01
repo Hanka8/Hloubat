@@ -13,7 +13,7 @@ function showOrHideMenu() {
 
 hamburgerBtn.addEventListener("click", showOrHideMenu);
 
-// TODO: swipe and touch events for mobile
+// TODO: swipe and touch events for mobile (hamburger + accordion)
 // TODO: clicking outside the menu closes it
 
 document.addEventListener("DOMContentLoaded", () => {

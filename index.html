@@ -14,32 +14,35 @@
   </head>
   <body>
     <script src="/index.js" defer></script>
-    <header class="header">
-      <button class="header__logo" aria-label="back to top"></button>
-      <button href="#" class="header__hamburger" data-custom="hamburgerBtn">
+    <nav class="nav">
+      <button class="nav__logo" aria-label="back to top"></button>
+      <button href="#" class="nav__hamburger" data-custom="hamburgerBtn">
         <span class="hamburger__line line-one"></span>
         <span class="hamburger__line line-two"></span>
         <span class="hamburger__line line-three"></span>
       </button>
-      <nav class="header__nav" data-custom="navMenu">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="#meditace" class="header__nav-link">Meditace</a>
+      <menu class="nav__menu" data-custom="navMenu">
+        <ul>
+          <li>
+            <a href="#meditace" class="menu__nav-link">Meditace</a>
           </li>
           <li class="header__nav-item">
-            <a href="#seznam-akci" class="header__nav-link">Seznam akcí</a>
+            <a href="#seznam-akci" class="menu__nav-link">Seznam akcí</a>
           </li>
           <li class="header__nav-item">
-            <a href="#o-mne" class="header__nav-link">O mně</a>
+            <a href="#o-mne" class="menu__nav-link">O mně</a>
           </li>
           <li class="header__nav-item">
-            <a href="#kontakt" class="header__nav-link">Kontakt</a>
+            <a href="#kontakt" class="menu__nav-link">Kontakt</a>
           </li>
           <li class="header__nav-item">
-            <a href="#kontakt" class="header__nav-link">Rezervační systém</a>
+            <a href="#kontakt" class="menu__nav-link">Rezervační systém</a>
           </li>
         </ul>
-      </nav>
+      </menu>
+    </nav>
+
+    <header class="header">
       <h1 class="header__title">HLOUB.AT</h1>
     </header>
 
@@ -92,7 +95,6 @@
                 </p>
               </div>
               <div class="carousel-slide">
-                <h3 class="carousel-header">Druhy meditace</h3>
                 <div class="accordion">
                   <div class="accordion-item">
                     <div
@@ -115,7 +117,7 @@
                       class="accordion-header"
                       onclick="toggleAccordion(event)"
                     >
-                      <h3>vhled</h3>
+                      <h3>vhledu</h3>
                     </div>
                     <div class="accordion-content">
                       <p>
@@ -217,6 +219,24 @@
             aria-label="next slide"
           ></button>
         </div>
+        <picture class="meditation-image">
+
+          <source
+            srcset="../assets/bonfire-429.webp"
+            media="(max-width: 429px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../assets/bonfire-390.webp"
+            media="(max-width: 390px)"
+            type="image/webp"
+          />
+          <img
+            class="image"
+            src="../assets/bonfire-1280.webp"
+            alt="Meditace"
+          />
+        </picture>
       </section>
 
       <section id="seznam-akci">
