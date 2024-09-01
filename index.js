@@ -11,7 +11,11 @@ function showOrHideMenu() {
   navMenu.classList.toggle("open");
 }
 
-hamburgerBtn.addEventListener("click", showOrHideMenu);
+hamburgerBtn.addEventListener("click", () => {
+  showOrHideMenu();
+  const expanded = button.getAttribute("aria-expanded") === "true" || false;
+  button.setAttribute("aria-expanded", !expanded);
+});
 
 // TODO: swipe and touch events for mobile (hamburger + accordion)
 // TODO: clicking outside the menu closes it
@@ -36,8 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel();
   }
 
-  carouselBtn
-    .addEventListener("click", nextSlide);
+  carouselBtn.addEventListener("click", nextSlide);
 
   updateCarousel();
 });
@@ -61,7 +64,6 @@ function toggleAccordion(event) {
     content.style.maxHeight = content.scrollHeight + "px";
   }
 }
-
 
 // REMOVE THE FOLLOWING CODE AFTER TESTING
 

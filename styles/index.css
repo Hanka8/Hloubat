@@ -145,7 +145,7 @@ table {
   }
 }
 
-.menu__nav-link {
+.nav__link {
   font-size: 38px;
   font-weight: 300;
   cursor: pointer;
@@ -153,11 +153,11 @@ table {
   text-decoration: none;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
-.menu__nav-link:hover {
+.nav__link:hover {
   text-decoration: underline;
 }
 @media (max-height: 500px) and (orientation: landscape) {
-  .menu__nav-link {
+  .nav__link {
     font-size: 24px;
   }
 }

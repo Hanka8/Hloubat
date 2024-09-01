@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="cs">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HLOUB.AT - Věnujte se meditaci s našimi lekcemi a akcemi. Objevte různé typy meditace, jako je mindfulness, vhledová meditace a meditace s mantrou. Připojte se k našim akcím v parku, na pláži nebo v lese a prohlubte své meditační dovednosti. Kontaktujte nás pro více informací.">
     <title>HLOUB.AT - Meditace</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/index.css">
   </head>
   <body>
     <script src="/index.js" defer></script>
     <nav class="nav">
       <button class="nav__logo" aria-label="back to top"></button>
-      <button href="#" class="nav__hamburger" data-custom="hamburgerBtn">
+      <button aria-label="open menu" aria-expanded="false" aria-controls="navigationMenu" class="nav__hamburger" data-custom="hamburgerBtn">
         <span class="hamburger__line hamburger__line--line-one"></span>
         <span class="hamburger__line hamburger__line--line-two "></span>
         <span class="hamburger__line hamburger__line--line-three"></span>
       </button>
-      <menu class="nav__menu" data-custom="navMenu">
-        <ul>
+      <menu class="nav__menu" data-custom="navMenu" id="navigationMenu">
           <li>
-            <a href="#meditace" class="menu__nav-link">Meditace</a>
+            <a href="#meditace" class="nav__link">Meditace</a>
           </li>
           <li>
-            <a href="#seznam-akci" class="menu__nav-link">Seznam akcí</a>
+            <a href="#seznam-akci" class="nav__link">Seznam akcí</a>
           </li>
           <li>
-            <a href="#o-mne" class="menu__nav-link">O mně</a>
+            <a href="#o-mne" class="nav__link">O mně</a>
           </li>
           <li>
-            <a href="#kontakt" class="menu__nav-link">Kontakt</a>
+            <a href="#kontakt" class="nav__link">Kontakt</a>
           </li>
           <li>
-            <a href="#kontakt" class="menu__nav-link">Rezervační systém</a>
+            <a href="#kontakt" class="nav__link">Rezervační systém</a>
           </li>
-        </ul>
       </menu>
     </nav>
 
@@ -47,7 +46,7 @@
     </header>
 
     <main>
-      <section class="quote">
+      <div class="quote">
         <blockquote
           class="quote__blockquote"
           cite="https://www.huxley.net/bnw/four.html"
@@ -55,7 +54,7 @@
           <p>“Meditace není útěk od reality, je to setkání s realitou.”</p>
         </blockquote>
         <p class="quote__author">- Thich Nhất Hanh</p>
-      </section>
+      </div>
 
       <section id="meditace" class="meditation">
         <div class="meditation__container">
@@ -72,7 +71,7 @@
                   nasloucháš svému tělu, nicméně tato zaměřena pozornost je
                   provázena pohybem.
                 </p>
-                <hr class="meditation__hr" />
+                <hr class="meditation__hr">
                 <h3 class="meditation__slide-heading">Jak to funguje</h3>
                 <p class="meditation__slide-text">
                   V jedné hodině probíhají dva úseky po 20 minutách. Začíná se v
@@ -81,13 +80,13 @@
                   polštáři, židli, můžeš i stát. Ať již dáš přednost meditaci
                   vhledu či všímavosti je na tobě. Je to přeci jen tvoje praxe.
                 </p>
-                <hr class="meditation__hr" />
+                <hr class="meditation__hr">
                 <h3 class="meditation__slide-heading">Proč někam chodit</h3>
                 <p class="meditation__slide-text">
                   Jak to již bývá, aktivita ve skupině je silnější a navíc si
                   tím dedikuješ čas k aktivitě.
                 </p>
-                <hr class="meditation__hr" />
+                <hr class="meditation__hr">
                 <h3 class="meditation__slide-heading">Co s sebou</h3>
                 <p class="meditation__slide-text">
                   Pohodlné oblečení k tomu zůstat v klidu po dobu 20 minut vsedě
@@ -303,7 +302,7 @@
         </picture>
       </section>
 
-      <section id="hero" class="quote">
+      <div class="quote">
         <blockquote
           class="quote__blockquote"
           cite="https://www.huxley.net/bnw/four.html"
@@ -314,7 +313,7 @@
           </p>
         </blockquote>
         <p class="quote__author">- Kodo Sawaki</p>
-      </section>
+      </div>
     </main>
 
     <footer id="kontakt" class="footer">
@@ -324,7 +323,7 @@
           >hloubat@tutamail.com</a
         >
       </div>
-      <hr class="footer__hr" />
+      <hr class="footer__hr">
       <div class="footer__credits">
         <p class="footer__credit">
           Designed by: <a href="https://ksirolga.cz">Olga Kšírová</a>
