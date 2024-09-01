@@ -220,7 +220,6 @@
           ></button>
         </div>
         <picture class="meditation-image">
-
           <source
             srcset="../assets/bonfire-429.webp"
             media="(max-width: 429px)"
@@ -231,18 +230,50 @@
             media="(max-width: 390px)"
             type="image/webp"
           />
-          <img
-            class="image"
-            src="../assets/bonfire-1280.webp"
-            alt="Meditace"
-          />
+          <img class="image" src="../assets/bonfire-1280.webp" alt="Meditace" />
         </picture>
       </section>
 
-      <section id="seznam-akci">
-        <h2>SEZNAM AKCÍ</h2>
-        <ul id="eventList"></ul>
-        <button id="dalsiAkceButton">DALŠÍ AKCE</button>
+      <section id="seznam-akci" class="events">
+        <h2 class="events__heading">Seznam akcí</h2>
+        <table class="events__table">
+          <thead class="events__thead">
+            <tr class="events__row">
+              <th class="events__header events__header--hide">Název</th>
+              <th class="events__header">Začátek</th>
+              <th class="events__header">Konec</th>
+              <th class="events__header">Místo</th>
+            </tr>
+          </thead>
+          <tbody class="events__tbody">
+            <tr class="events__row">
+              <td class="events__cell events__cell--bold" data-label="Název">Meditace v parku</td>
+              <td class="events__cell" data-label="Začátek">
+                1.6.2024 18:00
+              </td>
+              <td class="events__cell" data-label="Konec">1.6.2024 19:00</td>
+              <td class="events__cell" data-label="Místo">Park</td>
+            </tr>
+            <tr class="events__row">
+              <td class="events__cell events__cell--bold" data-label="Název">Meditace na pláži</td>
+              <td class="events__cell" data-label="Začátek">
+                2.6.2024 18:00
+              </td>
+              <td class="events__cell" data-label="Konec">2.6.2024 19:00</td>
+              <td class="events__cell" data-label="Místo">Pláž</td>
+            </tr>
+            <tr class="events__row">
+              <td class="events__cell events__cell--bold" data-label="Název">Meditace v lese</td>
+              <td class="events__cell" data-label="Začátek">
+                3.6.2024 18:00
+              </td>
+              <td class="events__cell" data-label="Konec">3.6.2024 19:00</td>
+              <td class="events__cell" data-label="Místo">Les</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="dalsiAkceButton" class="events__button">Rezervační systém</button>
       </section>
 
       <section id="o-mne">

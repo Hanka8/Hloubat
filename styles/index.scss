@@ -38,7 +38,8 @@ ol,
 button,
 input,
 textarea,
-blockquote {
+blockquote,
+table {
   font-family: "Oswald", sans-serif;
   color: #fff;
 }
@@ -303,7 +304,6 @@ blockquote {
   @media screen and (max-width: 590px) {
     padding-inline: $margin-inline-sm;
   }
-
 }
 
 .meditation-header {
@@ -346,6 +346,8 @@ blockquote {
 
 .carousel-hr {
   color: #fff;
+  background-color: #fff;
+  height: 3px;
 }
 
 .carousel-inner {
@@ -386,6 +388,7 @@ blockquote {
   display: block;
   width: 100%;
   height: 100%;
+  background-image: url("../assets/orange-bg.webp");
 
   .image {
     width: 100%;
@@ -415,7 +418,7 @@ blockquote {
   padding: 10px;
   transition: background-color 0.3s;
   background-color: #0d4551;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 3px solid #ddd;
   border-top-right-radius: 30px;
 
   &:hover {
@@ -441,3 +444,151 @@ blockquote {
     font-size: 18px;
   }
 }
+
+// SEZNAM AKCÍ
+.events {
+  background-image: url("../assets/orange-bg.webp");
+  padding-inline: $margin-inline;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media screen and (max-width: 1080px) {
+    padding-inline: $margin-inline-md;
+  }
+
+  @media screen and (max-width: 590px) {
+    padding-inline: $margin-inline-sm;
+  }
+}
+
+.events__heading {
+  font-size: 70px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 50px;
+  }
+}
+
+.events__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 36px;
+  text-align: left;
+  color: #fff;
+  font-weight: 300;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 24px;
+  }
+}
+
+.events__header {
+  padding: 10px 15px;
+  font-weight: 500;
+
+  &--hide {
+    opacity: 0;
+  }
+}
+
+.events__cell {
+  padding: 10px 15px;
+
+  &--bold {
+    font-weight: 500;
+  }
+}
+
+.events__row {
+  &:not(:last-child) {
+    border-bottom: 3px solid #fff;
+  }
+}
+
+.events__tbody {
+  .events__row:hover {
+      background-color: #f1f1f14f;
+
+      @media screen and (max-width: 768px) {
+        background-color: transparent;
+      }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .events__table, .events__thead, .events__tbody, .events__header, .events__cell, .events__row {
+    display: block;
+  }
+  
+  .events__thead {
+    display: none;
+  }
+  
+  .events__row {
+    margin: 0 0 1rem 0;
+  }
+  
+  .events__cell {
+    border: none;
+    border-bottom: 1px dotted #fff;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  
+  .events__cell:not(:first-child):before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(50% - 20px);
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    text-align: left;
+    font-weight: 500;
+  }
+}
+
+.events__button {
+  background-color: #BF5841;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 46px;
+  font-weight: 500;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  text-transform: uppercase;
+  align-self: flex-end;
+  margin-top: 50px;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: #fff;
+    color: #BF5841;
+    transition: 300ms ease;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media screen and (max-width: 1280px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    align-self: center;
+    font-size: 24px;
+  }
+}
+
