@@ -701,6 +701,7 @@ table {
   align-self: flex-end;
   margin-top: 50px;
   padding: 10px 20px;
+  text-decoration: none;
 }
 .events__button:hover {
   background-color: #fff;
