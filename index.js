@@ -5,6 +5,7 @@
   const navMenu = document.querySelector('[data-custom="navMenu"]');
   const navMenuItems = document.querySelectorAll('[data-custom="navMenuItem"]');
   const carouselBtn = document.querySelector('[data-custom="carouselBtn"]');
+  const backToTopBtn = document.querySelector('[data-custom="backToTopBtn"]');
   const carouselInner = document.querySelector('[data-custom="carouselInner"]');
   const carouselSlide1 = document.querySelector(
     '[data-custom="carouselSlide1"]'
@@ -20,6 +21,11 @@
   const accordionHeaders = document.querySelectorAll(
     '[data-custom="accordionHeader"]'
   );
+
+  // Back to Top Button Logic
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   // Hamburger Menu Logic
   function toggleAriaAttributes() {
@@ -172,6 +178,10 @@
       header.addEventListener("click", toggleAccordion)
     );
   }
+
+  // translation
+  const userLang = navigator.language || navigator.userLanguage;
+  console.log(userLang);
 
   // Initialize all functionality
   document.addEventListener("DOMContentLoaded", () => {

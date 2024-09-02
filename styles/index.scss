@@ -75,6 +75,10 @@ table {
     background-image: url("../assets/logo-hover.svg");
   }
 
+  @media screen and (max-width: 1920px) {
+    position: fixed;
+  }
+
   @media screen and (max-width: 568px) {
     left: $margin-inline-sm;
   }
@@ -99,6 +103,10 @@ table {
   &.close {
     transform: rotate(0deg);
     transition: 0ms;
+  }
+
+  @media screen and (max-width: 1920px) {
+    position: fixed;
   }
 
   @media screen and (max-width: 568px) {

@@ -68,6 +68,11 @@ table {
 .nav__logo:hover {
   background-image: url("../assets/logo-hover.svg");
 }
+@media screen and (max-width: 1920px) {
+  .nav__logo {
+    position: fixed;
+  }
+}
 @media screen and (max-width: 568px) {
   .nav__logo {
     left: 20px;
@@ -92,6 +97,11 @@ table {
 .nav__hamburger.close {
   transform: rotate(0deg);
   transition: 0ms;
+}
+@media screen and (max-width: 1920px) {
+  .nav__hamburger {
+    position: fixed;
+  }
 }
 @media screen and (max-width: 568px) {
   .nav__hamburger {

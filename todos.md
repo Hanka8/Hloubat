@@ -1,6 +1,6 @@
-- navigation bar - překrývá akce na desktopu, moc velká na ipadech a mibilech
 - překlad do aj?
+- jinak navbar na tabletu a mobilu? lištu?
 
-extras:
-
+final:
+- postcss
 - meta tags na sdílení věcí
