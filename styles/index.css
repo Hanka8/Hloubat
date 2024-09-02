@@ -210,6 +210,11 @@ table {
   padding-top: 21%;
   padding-bottom: 10%;
 }
+@media screen and (max-width: 1280px) {
+  .header__title {
+    font-size: 90px;
+  }
+}
 @media (min-aspect-ratio: 154/100) and (max-aspect-ratio: 172/100) {
   .header__title {
     font-size: 90px;
@@ -244,6 +249,44 @@ table {
 @media (max-height: 500px) and (orientation: landscape) {
   .header__title {
     font-size: 50px;
+  }
+}
+
+.header__scroll-ico {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 53px;
+  background-image: url("../assets/scroll-ico.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: scroll 3s infinite;
+}
+@media screen and (max-width: 1280px) {
+  .header__scroll-ico {
+    width: 20px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .header__scroll-ico {
+    bottom: 10%;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(10px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -318,16 +361,41 @@ table {
   }
 }
 
+.meditation__head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
 .meditation__heading {
   font-size: 70px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 16px;
 }
 @media screen and (max-width: 1280px) {
   .meditation__heading {
     font-size: 50px;
   }
+}
+
+.meditation__carousel-button {
+  height: 66px;
+  width: 92px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("../assets/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 300ms ease;
+}
+.meditation__carousel-button.prev {
+  background-image: url("../assets/arrow-left.svg");
+}
+.meditation__carousel-button:hover {
+  transform: scale(1.1);
 }
 
 .meditation__carousel {
@@ -417,27 +485,21 @@ table {
   }
 }
 
-.meditation__carousel-button {
-  height: 83px;
-  width: 21px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  right: 30px;
-  background-color: transparent;
-  background-image: url("../assets/arrow-right.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: 300ms ease;
+.meditation__indicator-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
-.meditation__carousel-button.prev {
-  background-image: url("../assets/arrow-left.svg");
+
+.meditation__carousel-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #0D4551;
 }
-.meditation__carousel-button:hover {
-  transform: translateY(-50%) scale(1.4);
+.meditation__carousel-indicator--active {
+  background-color: #6CC5D9;
 }
 
 .meditation__image {
@@ -604,16 +666,12 @@ table {
 
 .about {
   background-image: url("../assets/vrata-1280x357.webp");
-  background-size: contain;
-}
-@media screen and (max-width: 1920px) {
-  .about {
-    background-image: url("../assets/vrata-1280x551.webp");
-  }
+  background-size: cover;
 }
 @media screen and (max-width: 1440px) {
   .about {
     background-image: url("../assets/vrata-674.webp");
+    background-size: contain;
   }
 }
 @media screen and (max-width: 1280px) {

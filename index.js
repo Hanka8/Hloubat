@@ -12,6 +12,8 @@
   const carouselSlide2 = document.querySelector(
     '[data-custom="carouselSlide2"]'
   );
+  const carouselIndicatorLeft = document.querySelector('[data-custom="carouselIndicatorLeft"]');
+  const carouselIndicatorRight = document.querySelector('[data-custom="carouselIndicatorRight"]');
   const allAccordionContents = document.querySelectorAll(
     '[data-custom="accordionContent"]'
   );
@@ -70,6 +72,38 @@
     }
 
     carouselBtn.addEventListener("click", nextSlide);
+    carouselIndicatorLeft.addEventListener("click", () => {
+      if (
+        carouselIndicatorLeft.classList.contains(
+          "meditation__carousel-indicator--active"
+        )
+      ) {
+        return;
+      }
+      carouselIndicatorLeft.classList.add(
+        "meditation__carousel-indicator--active"
+      );
+      carouselIndicatorRight.classList.remove(
+        "meditation__carousel-indicator--active"
+      );
+      nextSlide();
+    });
+    carouselIndicatorRight.addEventListener("click", () => {
+      if (
+        carouselIndicatorRight.classList.contains(
+          "meditation__carousel-indicator--active"
+        )
+      ) {
+        return;
+      }
+      carouselIndicatorRight.classList.add(
+        "meditation__carousel-indicator--active"
+      );
+      carouselIndicatorLeft.classList.remove(
+        "meditation__carousel-indicator--active"
+      );
+      nextSlide();
+    });
     updateCarousel(currentSlide);
   }
 
@@ -86,19 +120,19 @@
   }
 
   function handleTouchEnd(event) {
-    if (Math.abs(touchStart - touchEnd) > 50) {
+    if (Math.abs(touchStart - touchEnd) > 80) {
       closeMenu();
     }
   }
 
   function handleTouchSlide1End(event) {
-    if (touchStart - touchEnd > 50) {
+    if (touchStart - touchEnd > 80) {
       carouselBtn.click();
     }
   }
 
   function handleTouchSlide2End(event) {
-    if (touchStart - touchEnd < -50) {
+    if (touchStart - touchEnd < -80) {
       carouselBtn.click();
     }
   }

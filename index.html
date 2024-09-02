@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="cs">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HLOUB.AT - Věnujte se meditaci s našimi lekcemi a akcemi. Objevte různé typy meditace, jako je mindfulness, vhledová meditace a meditace s mantrou. Připojte se k našim akcím v parku, na pláži nebo v lese a prohlubte své meditační dovednosti. Kontaktujte nás pro více informací.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HLOUB.AT - Věnujte se meditaci s našimi lekcemi a akcemi. Objevte různé typy meditace, jako je mindfulness, vhledová meditace a meditace s mantrou. Připojte se k našim akcím v parku, na pláži nebo v lese a prohlubte své meditační dovednosti. Kontaktujte nás pro více informací."
+    />
     <title>HLOUB.AT - Meditace</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" as="style" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" media="print" onload="this.media='all'" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      />
     </noscript>
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
     <script src="/index.js" defer></script>
     <nav class="nav">
       <button class="nav__logo" aria-label="back to top"></button>
-      <button aria-label="open menu" aria-expanded="false" aria-controls="navigationMenu" class="nav__hamburger" data-custom="hamburgerBtn">
+      <button
+        aria-label="open menu"
+        aria-expanded="false"
+        aria-controls="navigationMenu"
+        class="nav__hamburger"
+        data-custom="hamburgerBtn"
+      >
         <span class="hamburger__line hamburger__line--line-one"></span>
-        <span class="hamburger__line hamburger__line--line-two "></span>
+        <span class="hamburger__line hamburger__line--line-two"></span>
         <span class="hamburger__line hamburger__line--line-three"></span>
       </button>
       <menu class="nav__menu" data-custom="navMenu" id="navigationMenu">
-          <li>
-            <a href="#meditace" class="nav__link" data-custom="navMenuItem">Meditace</a>
-          </li>
-          <li>
-            <a href="#seznam-akci" class="nav__link" data-custom="navMenuItem">Seznam akcí</a>
-          </li>
-          <li>
-            <a href="#o-mne" class="nav__link" data-custom="navMenuItem">O mně</a>
-          </li>
-          <li>
-            <a href="#kontakt" class="nav__link" data-custom="navMenuItem">Kontakt</a>
-          </li>
-          <li>
-            <a href="#kontakt" class="nav__link" data-custom="navMenuItem">Rezervační systém</a>
-          </li>
+        <li>
+          <a href="#meditace" class="nav__link" data-custom="navMenuItem"
+            >Meditace</a
+          >
+        </li>
+        <li>
+          <a href="#seznam-akci" class="nav__link" data-custom="navMenuItem"
+            >Seznam akcí</a
+          >
+        </li>
+        <li>
+          <a href="#o-mne" class="nav__link" data-custom="navMenuItem">O mně</a>
+        </li>
+        <li>
+          <a href="#kontakt" class="nav__link" data-custom="navMenuItem"
+            >Kontakt</a
+          >
+        </li>
+        <li>
+          <a href="#kontakt" class="nav__link" data-custom="navMenuItem"
+            >Rezervační systém</a
+          >
+        </li>
       </menu>
     </nav>
 
     <header class="header">
       <h1 class="header__title">HLOUB.AT</h1>
+      <div class="header__scroll-ico"></div>
     </header>
 
     <main>
@@ -59,10 +89,20 @@
 
       <section id="meditace" class="meditation">
         <div class="meditation__container">
+          <div class="meditation__head-container">
           <h2 class="meditation__heading">Meditace</h2>
+          <button
+            data-custom="carouselBtn"
+            class="meditation__carousel-button"
+            aria-label="next slide"
+          ></button>
+          </div>
           <div class="meditation__carousel">
             <div class="meditation__inner" data-custom="carouselInner">
-              <div class="meditation__slide active" data-custom="carouselSlide1">
+              <div
+                class="meditation__slide active"
+                data-custom="carouselSlide1"
+              >
                 <h3 class="meditation__slide-heading">O meditaci</h3>
                 <p class="meditation__slide-text">
                   Můžeš to brát jako jako naprosto sekulární psychologický
@@ -72,7 +112,7 @@
                   nasloucháš svému tělu, nicméně tato zaměřena pozornost je
                   provázena pohybem.
                 </p>
-                <hr class="meditation__hr">
+                <hr class="meditation__hr" />
                 <h3 class="meditation__slide-heading">Jak to funguje</h3>
                 <p class="meditation__slide-text">
                   V jedné hodině probíhají dva úseky po 20 minutách. Začíná se v
@@ -81,13 +121,13 @@
                   polštáři, židli, můžeš i stát. Ať již dáš přednost meditaci
                   vhledu či všímavosti je na tobě. Je to přeci jen tvoje praxe.
                 </p>
-                <hr class="meditation__hr">
+                <hr class="meditation__hr" />
                 <h3 class="meditation__slide-heading">Proč někam chodit</h3>
                 <p class="meditation__slide-text">
                   Jak to již bývá, aktivita ve skupině je silnější a navíc si
                   tím dedikuješ čas k aktivitě.
                 </p>
-                <hr class="meditation__hr">
+                <hr class="meditation__hr" />
                 <h3 class="meditation__slide-heading">Co s sebou</h3>
                 <p class="meditation__slide-text">
                   Pohodlné oblečení k tomu zůstat v klidu po dobu 20 minut vsedě
@@ -96,20 +136,25 @@
               </div>
               <div class="meditation__slide" data-custom="carouselSlide2">
                 <div class="meditation__accordion">
-                  <div class="meditation__accordion-item" >
+                  <div class="meditation__accordion-item">
                     <div
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
                       <h3>pozornosti</h3>
                     </div>
-                    <div class="meditation__accordion-content" data-custom="accordionContent">
+                    <div
+                      class="meditation__accordion-content"
+                      data-custom="accordionContent"
+                    >
                       <p>
                         Meditace pozornosti se zaměřuje na soustředění mysli na
                         jeden konkrétní objekt, jako je dech nebo tělesné
                         pocity. Tato praxe může zlepšit schopnost koncentrace a
                         bývá obvykle praktikována po dobu 10-30 minut denně.
-                      <p>
+                      </p>
+
+                      <p></p>
                     </div>
                   </div>
                   <div class="meditation__accordion-item">
@@ -119,7 +164,10 @@
                     >
                       <h3>vhledu</h3>
                     </div>
-                    <div class="meditation__accordion-content" data-custom="accordionContent">
+                    <div
+                      class="meditation__accordion-content"
+                      data-custom="accordionContent"
+                    >
                       <p>
                         Vhledová meditace se snaží o hlubší porozumění povaze
                         mysli a reality. Tato forma meditace může vést k
@@ -136,7 +184,10 @@
                     >
                       <h3>mindfullness</h3>
                     </div>
-                    <div class="meditation__accordion-content" data-custom="accordionContent">
+                    <div
+                      class="meditation__accordion-content"
+                      data-custom="accordionContent"
+                    >
                       <p>
                         Mindfulness meditace kultivuje vědomé prožívání
                         přítomného okamžiku bez hodnocení. Pravidelná praxe
@@ -152,7 +203,10 @@
                     >
                       <h3>s mantrou</h3>
                     </div>
-                    <div class="meditation__accordion-content" data-custom="accordionContent">
+                    <div
+                      class="meditation__accordion-content"
+                      data-custom="accordionContent"
+                    >
                       <p>
                         Při meditaci s mantrou se opakuje určité slovo nebo
                         fráze pro zklidnění mysli. Tato technika může zlepšit
@@ -168,7 +222,10 @@
                     >
                       <h3>laskavosti</h3>
                     </div>
-                    <div class="meditation__accordion-content" data-custom="accordionContent">
+                    <div
+                      class="meditation__accordion-content"
+                      data-custom="accordionContent"
+                    >
                       <p>
                         Meditace laskavosti rozvíjí pocity dobré vůle vůči sobě
                         a ostatním. Tato praxe může zvýšit empatii a zlepšit
@@ -183,7 +240,10 @@
                     >
                       <h3>pohybová</h3>
                     </div>
-                    <div class="meditation__accordion-content" data-custom="accordionContent">
+                    <div
+                      class="meditation__accordion-content"
+                      data-custom="accordionContent"
+                    >
                       <p>
                         Pohybová meditace zahrnuje vědomé provádění fyzických
                         pohybů, jako je chůze nebo tai chi. Tato forma může
@@ -200,7 +260,10 @@
                     >
                       <h3>řízená</h3>
                     </div>
-                    <div class="meditation__accordion-content" data-custom="accordionContent">
+                    <div
+                      class="meditation__accordion-content"
+                      data-custom="accordionContent"
+                    >
                       <p>
                         Řízená meditace využívá slovních pokynů k vedení
                         praktikujícího skrze vizualizace nebo relaxační
@@ -213,11 +276,18 @@
               </div>
             </div>
           </div>
+          <div class="meditation__indicator-container">
           <button
-            data-custom="carouselBtn"
-            class="meditation__carousel-button"
+            data-custom="carouselIndicatorLeft"
+            class="meditation__carousel-indicator meditation__carousel-indicator--active"
+            aria-label="previous slide"
+          ></button>
+          <button
+            data-custom="carouselIndicatorRight"
+            class="meditation__carousel-indicator"
             aria-label="next slide"
           ></button>
+          </div>
         </div>
         <picture class="meditation__image">
           <source
@@ -305,11 +375,7 @@
             media="(max-width: 674px)"
             type="image/webp"
           />
-          <img
-            class="image"
-            src="assets/vrata-1280x551.webp"
-            alt="Vratislav"
-          />
+          <img class="image" src="assets/vrata-1280x551.webp" alt="Vratislav" />
         </picture>
       </section>
 
@@ -334,7 +400,7 @@
           >hloubat@tutamail.com</a
         >
       </div>
-      <hr class="footer__hr">
+      <hr class="footer__hr" />
       <div class="footer__credits">
         <p class="footer__credit">
           Designed by: <a href="https://ksirolga.cz">Olga Kšírová</a>
