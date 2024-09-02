@@ -401,8 +401,18 @@ table {
   background-size: cover;
   transition: 300ms ease;
 }
+.meditation__carousel-button[aria-label="Next slide"] {
+  background-image: url("../assets/arrow-right-eng.svg");
+  height: 46px;
+  width: 46px;
+}
 .meditation__carousel-button.prev {
   background-image: url("../assets/arrow-left.svg");
+}
+.meditation__carousel-button.prev[aria-label="Next slide"] {
+  background-image: url("../assets/arrow-left-eng.svg");
+  height: 46px;
+  width: 46px;
 }
 .meditation__carousel-button:hover {
   transform: scale(1.1);
@@ -506,10 +516,10 @@ table {
   height: 16px;
   border-radius: 50%;
   border: 1px solid #fff;
-  background-color: #0D4551;
+  background-color: #0d4551;
 }
 .meditation__carousel-indicator--active {
-  background-color: #6CC5D9;
+  background-color: #6cc5d9;
 }
 
 .meditation__image {

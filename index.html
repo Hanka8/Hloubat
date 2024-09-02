@@ -32,12 +32,20 @@
 
   <body>
     <script src="/index.js" defer></script>
+    <script src="/translate.js" defer></script>
+
     <nav class="nav">
-      <button class="nav__logo" aria-label="back to top" data-custom="backToTopBtn"></button>
+      <button
+        class="nav__logo"
+        aria-label="back to top"
+        data-custom="backToTopBtn"
+        data-translate-aria-label="backToTop"
+      ></button>
       <button
         aria-label="open menu"
         aria-expanded="false"
         aria-controls="navigationMenu"
+        data-translate-aria-label="openMenu"
         class="nav__hamburger"
         data-custom="hamburgerBtn"
       >
@@ -47,25 +55,47 @@
       </button>
       <menu class="nav__menu" data-custom="navMenu" id="navigationMenu">
         <li>
-          <a href="#meditace" class="nav__link" data-custom="navMenuItem"
+          <a
+            href="#meditace"
+            class="nav__link"
+            data-custom="navMenuItem"
+            data-translate-key="navMeditace"
             >Meditace</a
           >
         </li>
         <li>
-          <a href="#seznam-akci" class="nav__link" data-custom="navMenuItem"
+          <a
+            href="#seznam-akci"
+            class="nav__link"
+            data-custom="navMenuItem"
+            data-translate-key="navSeznamAkci"
             >Seznam akcí</a
           >
         </li>
         <li>
-          <a href="#o-mne" class="nav__link" data-custom="navMenuItem">O mně</a>
+          <a
+            href="#o-mne"
+            class="nav__link"
+            data-custom="navMenuItem"
+            data-translate-key="navOMne"
+            >O mně</a
+          >
         </li>
         <li>
-          <a href="#kontakt" class="nav__link" data-custom="navMenuItem"
+          <a
+            href="#kontakt"
+            class="nav__link"
+            data-custom="navMenuItem"
+            data-translate-key="navKontakt"
             >Kontakt</a
           >
         </li>
         <li>
-          <a href="#kontakt" class="nav__link" data-custom="navMenuItem"
+          <a
+            href="#kontakt"
+            class="nav__link"
+            data-custom="navMenuItem"
+            data-translate-key="navRezervacniSystem"
             >Rezervační systém</a
           >
         </li>
@@ -82,21 +112,32 @@
         <blockquote
           class="quote__blockquote"
           cite="https://www.huxley.net/bnw/four.html"
+          data-translate-key="quoteBlockquote"
         >
-          <p>“Meditace není útěk od reality, je to setkání s realitou.”</p>
+          <p data-translate-key="quoteText">
+            “Meditace není útěk od reality, je to setkání s realitou.”
+          </p>
         </blockquote>
-        <p class="quote__author">- Thich Nhất Hanh</p>
+        <p class="quote__author" data-translate-key="quoteAuthor">
+          - Thich Nhất Hanh
+        </p>
       </div>
 
       <section id="meditace" class="meditation">
         <div class="meditation__container">
           <div class="meditation__head-container">
-          <h2 class="meditation__heading">Meditace</h2>
-          <button
-            data-custom="carouselBtn"
-            class="meditation__carousel-button"
-            aria-label="next slide"
-          ></button>
+            <h2
+              class="meditation__heading"
+              data-translate-key="meditationHeading"
+            >
+              Meditace
+            </h2>
+            <button
+              data-custom="carouselBtn"
+              class="meditation__carousel-button"
+              aria-label="další snímek"
+              data-translate-aria-label="carouselNextSlide"
+            ></button>
           </div>
           <div class="meditation__carousel">
             <div class="meditation__inner" data-custom="carouselInner">
@@ -104,8 +145,16 @@
                 class="meditation__slide active"
                 data-custom="carouselSlide1"
               >
-                <h3 class="meditation__slide-heading">O meditaci</h3>
-                <p class="meditation__slide-text">
+                <h3
+                  class="meditation__slide-heading"
+                  data-translate-key="meditationSlide1Heading1"
+                >
+                  O meditaci
+                </h3>
+                <p
+                  class="meditation__slide-text"
+                  data-translate-key="meditationSlide1Text1"
+                >
                   Můžeš to brát jako jako naprosto sekulární psychologický
                   nástroj nebo naopak jako element své vlastní víry. Meditace je
                   nepohybová. Je to pouze doplněk k tvé vědomé praxi, neboť i
@@ -114,8 +163,16 @@
                   provázena pohybem.
                 </p>
                 <hr class="meditation__hr" />
-                <h3 class="meditation__slide-heading">Jak to funguje</h3>
-                <p class="meditation__slide-text">
+                <h3
+                  class="meditation__slide-heading"
+                  data-translate-key="meditationSlide1Heading2"
+                >
+                  Jak to funguje
+                </h3>
+                <p
+                  class="meditation__slide-text"
+                  data-translate-key="meditationSlide1Text2"
+                >
                   V jedné hodině probíhají dva úseky po 20 minutách. Začíná se v
                   celou hodinu a ty zaujmeš polohu, ve které dokážeš vydržet
                   tento časový úsek. Může to být sed na meditační stoličce,
@@ -123,14 +180,30 @@
                   vhledu či všímavosti je na tobě. Je to přeci jen tvoje praxe.
                 </p>
                 <hr class="meditation__hr" />
-                <h3 class="meditation__slide-heading">Proč někam chodit</h3>
-                <p class="meditation__slide-text">
+                <h3
+                  class="meditation__slide-heading"
+                  data-translate-key="meditationSlide1Heading3"
+                >
+                  Proč někam chodit
+                </h3>
+                <p
+                  class="meditation__slide-text"
+                  data-translate-key="meditationSlide1Text3"
+                >
                   Jak to již bývá, aktivita ve skupině je silnější a navíc si
                   tím dedikuješ čas k aktivitě.
                 </p>
                 <hr class="meditation__hr" />
-                <h3 class="meditation__slide-heading">Co s sebou</h3>
-                <p class="meditation__slide-text">
+                <h3
+                  class="meditation__slide-heading"
+                  data-translate-key="meditationSlide1Heading4"
+                >
+                  Co s sebou
+                </h3>
+                <p
+                  class="meditation__slide-text"
+                  data-translate-key="meditationSlide1Text4"
+                >
                   Pohodlné oblečení k tomu zůstat v klidu po dobu 20 minut vsedě
                   nebo vestoje.
                 </p>
@@ -142,20 +215,20 @@
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
-                      <h3>pozornosti</h3>
+                      <h3 data-translate-key="accordionHeadingAttention">
+                        pozornosti
+                      </h3>
                     </div>
                     <div
                       class="meditation__accordion-content"
                       data-custom="accordionContent"
                     >
-                      <p>
+                      <p data-translate-key="accordionContentAttention">
                         Meditace pozornosti se zaměřuje na soustředění mysli na
                         jeden konkrétní objekt, jako je dech nebo tělesné
                         pocity. Tato praxe může zlepšit schopnost koncentrace a
                         bývá obvykle praktikována po dobu 10-30 minut denně.
                       </p>
-
-                      <p></p>
                     </div>
                   </div>
                   <div class="meditation__accordion-item">
@@ -163,13 +236,15 @@
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
-                      <h3>vhledu</h3>
+                      <h3 data-translate-key="accordionHeadingInsight">
+                        vhledu
+                      </h3>
                     </div>
                     <div
                       class="meditation__accordion-content"
                       data-custom="accordionContent"
                     >
-                      <p>
+                      <p data-translate-key="accordionContentInsight">
                         Vhledová meditace se snaží o hlubší porozumění povaze
                         mysli a reality. Tato forma meditace může vést k
                         významným osobním objevům a transformacím a často se
@@ -183,13 +258,15 @@
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
-                      <h3>mindfullness</h3>
+                      <h3 data-translate-key="accordionHeadingMindfulness">
+                        mindfulness
+                      </h3>
                     </div>
                     <div
                       class="meditation__accordion-content"
                       data-custom="accordionContent"
                     >
-                      <p>
+                      <p data-translate-key="accordionContentMindfulness">
                         Mindfulness meditace kultivuje vědomé prožívání
                         přítomného okamžiku bez hodnocení. Pravidelná praxe
                         mindfulness může snížit stres a úzkost a doporučuje se
@@ -202,13 +279,15 @@
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
-                      <h3>s mantrou</h3>
+                      <h3 data-translate-key="accordionHeadingMantra">
+                        s mantrou
+                      </h3>
                     </div>
                     <div
                       class="meditation__accordion-content"
                       data-custom="accordionContent"
                     >
-                      <p>
+                      <p data-translate-key="accordionContentMantra">
                         Při meditaci s mantrou se opakuje určité slovo nebo
                         fráze pro zklidnění mysli. Tato technika může zlepšit
                         soustředění a snížit stres, přičemž typická délka praxe
@@ -221,13 +300,15 @@
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
-                      <h3>laskavosti</h3>
+                      <h3 data-translate-key="accordionHeadingKindness">
+                        laskavosti
+                      </h3>
                     </div>
                     <div
                       class="meditation__accordion-content"
                       data-custom="accordionContent"
                     >
-                      <p>
+                      <p data-translate-key="accordionContentKindness">
                         Meditace laskavosti rozvíjí pocity dobré vůle vůči sobě
                         a ostatním. Tato praxe může zvýšit empatii a zlepšit
                         mezilidské vztahy a obvykle trvá 10-30 minut.
@@ -239,13 +320,15 @@
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
-                      <h3>pohybová</h3>
+                      <h3 data-translate-key="accordionHeadingMovement">
+                        pohybová
+                      </h3>
                     </div>
                     <div
                       class="meditation__accordion-content"
                       data-custom="accordionContent"
                     >
-                      <p>
+                      <p data-translate-key="accordionContentMovement">
                         Pohybová meditace zahrnuje vědomé provádění fyzických
                         pohybů, jako je chůze nebo tai chi. Tato forma může
                         zlepšit tělesné uvědomění a rovnováhu a může být
@@ -259,13 +342,15 @@
                       class="meditation__accordion-heading"
                       data-custom="accordionHeader"
                     >
-                      <h3>řízená</h3>
+                      <h3 data-translate-key="accordionHeadingGuided">
+                        řízená
+                      </h3>
                     </div>
                     <div
                       class="meditation__accordion-content"
                       data-custom="accordionContent"
                     >
-                      <p>
+                      <p data-translate-key="accordionContentGuided">
                         Řízená meditace využívá slovních pokynů k vedení
                         praktikujícího skrze vizualizace nebo relaxační
                         techniky. Může pomoci snížit úzkost a zlepšit kvalitu
@@ -278,16 +363,18 @@
             </div>
           </div>
           <div class="meditation__indicator-container">
-          <button
-            data-custom="carouselIndicatorLeft"
-            class="meditation__carousel-indicator meditation__carousel-indicator--active"
-            aria-label="previous slide"
-          ></button>
-          <button
-            data-custom="carouselIndicatorRight"
-            class="meditation__carousel-indicator"
-            aria-label="next slide"
-          ></button>
+            <button
+              data-custom="carouselIndicatorLeft"
+              class="meditation__carousel-indicator meditation__carousel-indicator--active"
+              aria-label="previous slide"
+              data-translate-aria-label="carouselPreviousSlide"
+            ></button>
+            <button
+              data-custom="carouselIndicatorRight"
+              class="meditation__carousel-indicator"
+              aria-label="next slide"
+              data-translate-aria-label="carouselNextSlide"
+            ></button>
           </div>
         </div>
         <picture class="meditation__image">
@@ -301,58 +388,146 @@
             media="(max-width: 390px)"
             type="image/webp"
           />
-          <img class="image" src="assets/bonfire-1280.webp" alt="Meditace" />
+          <img
+            class="image"
+            src="assets/bonfire-1280.webp"
+            alt="Meditace"
+            data-translate-key="meditationImageAlt"
+          />
         </picture>
       </section>
 
       <section id="seznam-akci" class="events">
-        <h2 class="events__heading">Seznam akcí</h2>
+        <h2 class="events__heading" data-translate-key="eventsHeading">
+          Seznam akcí
+        </h2>
         <table class="events__table">
           <thead class="events__thead">
             <tr class="events__row">
-              <th class="events__header events__header--hide">Název</th>
-              <th class="events__header">Začátek</th>
-              <th class="events__header">Konec</th>
-              <th class="events__header">Místo</th>
+              <th
+                class="events__header events__header--hide"
+                data-translate-key="eventsHeaderName"
+              >
+                Název
+              </th>
+              <th class="events__header" data-translate-key="eventsHeaderStart">
+                Začátek
+              </th>
+              <th class="events__header" data-translate-key="eventsHeaderEnd">
+                Konec
+              </th>
+              <th class="events__header" data-translate-key="eventsHeaderPlace">
+                Místo
+              </th>
             </tr>
           </thead>
           <tbody class="events__tbody">
             <tr class="events__row">
-              <td class="events__cell events__cell--bold" data-label="Název">
+              <td
+                class="events__cell events__cell--bold"
+                data-label="Název"
+                data-translate-key="eventsName1"
+              >
                 Meditace v parku
               </td>
-              <td class="events__cell" data-label="Začátek">1.6.2024 18:00</td>
-              <td class="events__cell" data-label="Konec">1.6.2024 19:00</td>
-              <td class="events__cell" data-label="Místo">Park</td>
+              <td
+                class="events__cell"
+                data-label="Začátek"
+                data-translate-key="eventsStart1"
+              >
+                1.6.2024 18:00
+              </td>
+              <td
+                class="events__cell"
+                data-label="Konec"
+                data-translate-key="eventsEnd1"
+              >
+                1.6.2024 19:00
+              </td>
+              <td
+                class="events__cell"
+                data-label="Místo"
+                data-translate-key="eventsPlace1"
+              >
+                Park
+              </td>
             </tr>
             <tr class="events__row">
-              <td class="events__cell events__cell--bold" data-label="Název">
+              <td
+                class="events__cell events__cell--bold"
+                data-label="Název"
+                data-translate-key="eventsName2"
+              >
                 Meditace na pláži
               </td>
-              <td class="events__cell" data-label="Začátek">2.6.2024 18:00</td>
-              <td class="events__cell" data-label="Konec">2.6.2024 19:00</td>
-              <td class="events__cell" data-label="Místo">Pláž</td>
+              <td
+                class="events__cell"
+                data-label="Začátek"
+                data-translate-key="eventsStart2"
+              >
+                2.6.2024 18:00
+              </td>
+              <td
+                class="events__cell"
+                data-label="Konec"
+                data-translate-key="eventsEnd2"
+              >
+                2.6.2024 19:00
+              </td>
+              <td
+                class="events__cell"
+                data-label="Místo"
+                data-translate-key="eventsPlace2"
+              >
+                Pláž
+              </td>
             </tr>
             <tr class="events__row">
-              <td class="events__cell events__cell--bold" data-label="Název">
+              <td
+                class="events__cell events__cell--bold"
+                data-label="Název"
+                data-translate-key="eventsName3"
+              >
                 Meditace v lese
               </td>
-              <td class="events__cell" data-label="Začátek">3.6.2024 18:00</td>
-              <td class="events__cell" data-label="Konec">3.6.2024 19:00</td>
-              <td class="events__cell" data-label="Místo">Les</td>
+              <td
+                class="events__cell"
+                data-label="Začátek"
+                data-translate-key="eventsStart3"
+              >
+                3.6.2024 18:00
+              </td>
+              <td
+                class="events__cell"
+                data-label="Konec"
+                data-translate-key="eventsEnd3"
+              >
+                3.6.2024 19:00
+              </td>
+              <td
+                class="events__cell"
+                data-label="Místo"
+                data-translate-key="eventsPlace3"
+              >
+                Les
+              </td>
             </tr>
           </tbody>
         </table>
 
-        <button id="dalsiAkceButton" class="events__button">
+        <button
+          id="dalsiAkceButton"
+          class="events__button"
+          data-translate-key="reservationSystemButton"
+        >
           Rezervační systém
         </button>
       </section>
 
       <section id="o-mne" class="about">
         <div class="about__container">
-          <h2 class="about__header">O mně</h2>
-          <p class="about__text">
+          <h2 class="about__header" data-translate-key="aboutHeader">O mně</h2>
+          <p class="about__text" data-translate-key="aboutText">
             Meditaci se věnuji přes deset let, od imaginací přes prostou
             pozornost. Prošel jsem retreaty nebo pobyty ve tmě. Jsem studentem
             psychologie a meditaci vnímám jako nástroj k sebereflexi, kde člověk
@@ -376,7 +551,12 @@
             media="(max-width: 674px)"
             type="image/webp"
           />
-          <img class="image" src="assets/vrata-1280x551.webp" alt="Vratislav" />
+          <img
+            class="image"
+            src="assets/vrata-1280x551.webp"
+            alt="Vratislav"
+            data-translate-key="aboutPictureAlt"
+          />
         </picture>
       </section>
 
@@ -384,31 +564,47 @@
         <blockquote
           class="quote__blockquote"
           cite="https://www.huxley.net/bnw/four.html"
+          data-translate-key="quoteText"
         >
           <p>
             “I warn you that zazen is useless.”. At least you don't practice a
             zazen that is useless, Your zazen will really be of no use.”
           </p>
         </blockquote>
-        <p class="quote__author">- Kodo Sawaki</p>
+        <p class="quote__author" data-translate-key="quoteAuthor">
+          - Kodo Sawaki
+        </p>
       </div>
     </main>
 
     <footer id="kontakt" class="footer">
       <div class="footer__container">
-        <h2 class="footer__header">Kontakt</h2>
-        <a class="footer__a" href="mailto:hloubat@tutamail.com"
-          >hloubat@tutamail.com</a
+        <h2 class="footer__header" data-translate-key="footerHeader">
+          Kontakt
+        </h2>
+        <a
+          class="footer__a"
+          href="mailto:hloubat@tutamail.com"
+         
         >
+          hloubat@tutamail.com
+        </a>
       </div>
       <hr class="footer__hr" />
       <div class="footer__credits">
         <p class="footer__credit">
-          Designed by: <a href="https://ksirolga.cz">Olga Kšírová</a>
+          Designed by:
+          <a
+            href="https://ksirolga.cz"
+            >Olga Kšírová</a
+          >
         </p>
 
         <p class="footer__credit">
-          Coded by: <a href="https://hanamarus.cz">Hana Maruškevičová</a>
+          Coded by:
+          <a href="https://hanamarus.cz"
+            >Hana Maruškevičová</a
+          >
         </p>
         <p class="footer__credit">
           &copy; 2024 HLOUB.AT. Všechna práva vyhrazena.

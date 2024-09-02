@@ -13,8 +13,12 @@
   const carouselSlide2 = document.querySelector(
     '[data-custom="carouselSlide2"]'
   );
-  const carouselIndicatorLeft = document.querySelector('[data-custom="carouselIndicatorLeft"]');
-  const carouselIndicatorRight = document.querySelector('[data-custom="carouselIndicatorRight"]');
+  const carouselIndicatorLeft = document.querySelector(
+    '[data-custom="carouselIndicatorLeft"]'
+  );
+  const carouselIndicatorRight = document.querySelector(
+    '[data-custom="carouselIndicatorRight"]'
+  );
   const allAccordionContents = document.querySelectorAll(
     '[data-custom="accordionContent"]'
   );
@@ -74,6 +78,12 @@
     function nextSlide() {
       currentSlide = (currentSlide + 1) % totalSlides;
       carouselBtn.classList.toggle("prev");
+      carouselIndicatorLeft.classList.toggle(
+        "meditation__carousel-indicator--active"
+      );
+      carouselIndicatorRight.classList.toggle(
+        "meditation__carousel-indicator--active"
+      );
       updateCarousel(currentSlide);
     }
 
@@ -86,12 +96,6 @@
       ) {
         return;
       }
-      carouselIndicatorLeft.classList.add(
-        "meditation__carousel-indicator--active"
-      );
-      carouselIndicatorRight.classList.remove(
-        "meditation__carousel-indicator--active"
-      );
       nextSlide();
     });
     carouselIndicatorRight.addEventListener("click", () => {
@@ -102,12 +106,6 @@
       ) {
         return;
       }
-      carouselIndicatorRight.classList.add(
-        "meditation__carousel-indicator--active"
-      );
-      carouselIndicatorLeft.classList.remove(
-        "meditation__carousel-indicator--active"
-      );
       nextSlide();
     });
     updateCarousel(currentSlide);
@@ -178,10 +176,6 @@
       header.addEventListener("click", toggleAccordion)
     );
   }
-
-  // translation
-  const userLang = navigator.language || navigator.userLanguage;
-  console.log(userLang);
 
   // Initialize all functionality
   document.addEventListener("DOMContentLoaded", () => {

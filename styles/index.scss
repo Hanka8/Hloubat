@@ -121,7 +121,7 @@ table {
   background-color: #ffffff;
   margin: 10px 0;
   border-radius: 20px;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.30);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 
   &--line-one.close {
     transform: rotate(45deg);
@@ -392,8 +392,20 @@ table {
   background-size: cover;
   transition: 300ms ease;
 
+  &[aria-label="Next slide"] {
+    background-image: url("../assets/arrow-right-eng.svg");
+    height: 46px;
+    width: 46px;
+  }
+
   &.prev {
     background-image: url("../assets/arrow-left.svg");
+
+    &[aria-label="Next slide"] {
+      background-image: url("../assets/arrow-left-eng.svg");
+      height: 46px;
+      width: 46px;
+    }
   }
 
   &:hover {
@@ -498,10 +510,10 @@ table {
   height: 16px;
   border-radius: 50%;
   border: 1px solid #fff;
-  background-color: #0D4551;
+  background-color: #0d4551;
 
   &--active {
-    background-color: #6CC5D9;
+    background-color: #6cc5d9;
   }
 }
 
