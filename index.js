@@ -2,6 +2,7 @@
   // DOM Elements
   const hamburgerBtn = document.querySelector('[data-custom="hamburgerBtn"]');
   const hamburgerLines = hamburgerBtn.querySelectorAll("span");
+  const navBar = document.querySelector('[data-custom="navBar"]');
   const navMenu = document.querySelector('[data-custom="navMenu"]');
   const navMenuItems = document.querySelectorAll('[data-custom="navMenuItem"]');
   const carouselBtn = document.querySelector('[data-custom="carouselBtn"]');
@@ -25,6 +26,15 @@
   const accordionHeaders = document.querySelectorAll(
     '[data-custom="accordionHeader"]'
   );
+
+  // Navbar backgroung on mobile when scrolling 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+      navBar.classList.add("nav--scroll-mobile");
+    } else {
+      navBar.classList.remove("nav--scroll-mobile");
+    }
+  });
 
   // Back to Top Button Logic
   backToTopBtn.addEventListener("click", () => {
