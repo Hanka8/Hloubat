@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1920px;
   margin-inline: auto;
@@ -81,6 +85,10 @@ table {
   transform: rotate(360deg);
   transition: 150ms ease;
 }
+.nav__hamburger:hover {
+  scale: 1.1;
+  transition: 200ms;
+}
 .nav__hamburger.close {
   transform: rotate(0deg);
   transition: 0ms;
@@ -98,19 +106,23 @@ table {
   background-color: #ffffff;
   margin: 10px 0;
   border-radius: 20px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }
 .hamburger__line--line-one.close {
   transform: rotate(45deg);
   transform-origin: 7px 0;
-  transition: 150ms ease;
+  transition: 300ms ease;
+  box-shadow: none;
 }
 .hamburger__line--line-two.close {
   background-color: transparent;
+  box-shadow: none;
 }
 .hamburger__line--line-three.close {
   transform: rotate(-45deg);
-  transform-origin: 0 0;
-  transition: 150ms ease;
+  transform-origin: 0 2px;
+  transition: 300ms ease;
+  box-shadow: none;
 }
 
 .nav__menu {
@@ -131,7 +143,7 @@ table {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   z-index: 8;
-  transition: 150ms ease;
+  transition: 300ms ease;
 }
 @media screen and (min-width: 1920px) {
   .nav__menu {
@@ -591,8 +603,18 @@ table {
 }
 
 .about {
-  background-image: url("../assets/vrata-xxl.webp");
-  background-size: cover;
+  background-image: url("../assets/vrata-1280x357.webp");
+  background-size: contain;
+}
+@media screen and (max-width: 1920px) {
+  .about {
+    background-image: url("../assets/vrata-1280x551.webp");
+  }
+}
+@media screen and (max-width: 1440px) {
+  .about {
+    background-image: url("../assets/vrata-674.webp");
+  }
 }
 @media screen and (max-width: 1280px) {
   .about {

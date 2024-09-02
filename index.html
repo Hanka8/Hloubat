@@ -25,19 +25,19 @@
       </button>
       <menu class="nav__menu" data-custom="navMenu" id="navigationMenu">
           <li>
-            <a href="#meditace" class="nav__link">Meditace</a>
+            <a href="#meditace" class="nav__link" data-custom="navMenuItem">Meditace</a>
           </li>
           <li>
-            <a href="#seznam-akci" class="nav__link">Seznam akcí</a>
+            <a href="#seznam-akci" class="nav__link" data-custom="navMenuItem">Seznam akcí</a>
           </li>
           <li>
-            <a href="#o-mne" class="nav__link">O mně</a>
+            <a href="#o-mne" class="nav__link" data-custom="navMenuItem">O mně</a>
           </li>
           <li>
-            <a href="#kontakt" class="nav__link">Kontakt</a>
+            <a href="#kontakt" class="nav__link" data-custom="navMenuItem">Kontakt</a>
           </li>
           <li>
-            <a href="#kontakt" class="nav__link">Rezervační systém</a>
+            <a href="#kontakt" class="nav__link" data-custom="navMenuItem">Rezervační systém</a>
           </li>
       </menu>
     </nav>
@@ -62,7 +62,7 @@
           <h2 class="meditation__heading">Meditace</h2>
           <div class="meditation__carousel">
             <div class="meditation__inner" data-custom="carouselInner">
-              <div class="meditation__slide active">
+              <div class="meditation__slide active" data-custom="carouselSlide1">
                 <h3 class="meditation__slide-heading">O meditaci</h3>
                 <p class="meditation__slide-text">
                   Můžeš to brát jako jako naprosto sekulární psychologický
@@ -94,12 +94,12 @@
                   nebo vestoje.
                 </p>
               </div>
-              <div class="meditation__slide">
+              <div class="meditation__slide" data-custom="carouselSlide2">
                 <div class="meditation__accordion">
                   <div class="meditation__accordion-item" >
                     <div
                       class="meditation__accordion-heading"
-                      onclick="toggleAccordion(event)"
+                      data-custom="accordionHeader"
                     >
                       <h3>pozornosti</h3>
                     </div>
@@ -115,7 +115,7 @@
                   <div class="meditation__accordion-item">
                     <div
                       class="meditation__accordion-heading"
-                      onclick="toggleAccordion(event)"
+                      data-custom="accordionHeader"
                     >
                       <h3>vhledu</h3>
                     </div>
@@ -132,7 +132,7 @@
                   <div class="meditation__accordion-item">
                     <div
                       class="meditation__accordion-heading"
-                      onclick="toggleAccordion(event)"
+                      data-custom="accordionHeader"
                     >
                       <h3>mindfullness</h3>
                     </div>
@@ -148,7 +148,7 @@
                   <div class="meditation__accordion-item">
                     <div
                       class="meditation__accordion-heading"
-                      onclick="toggleAccordion(event)"
+                      data-custom="accordionHeader"
                     >
                       <h3>s mantrou</h3>
                     </div>
@@ -164,7 +164,7 @@
                   <div class="meditation__accordion-item">
                     <div
                       class="meditation__accordion-heading"
-                      onclick="toggleAccordion(event)"
+                      data-custom="accordionHeader"
                     >
                       <h3>laskavosti</h3>
                     </div>
@@ -179,7 +179,7 @@
                   <div class="meditation__accordion-item">
                     <div
                       class="meditation__accordion-heading"
-                      onclick="toggleAccordion(event)"
+                      data-custom="accordionHeader"
                     >
                       <h3>pohybová</h3>
                     </div>
@@ -196,7 +196,7 @@
                   <div class="meditation__accordion-item">
                     <div
                       class="meditation__accordion-heading"
-                      onclick="toggleAccordion(event)"
+                      data-custom="accordionHeader"
                     >
                       <h3>řízená</h3>
                     </div>
@@ -295,9 +295,19 @@
           </p>
         </div>
         <picture class="about__picture">
+          <source
+            srcset="assets/vrata-390.webp"
+            media="(max-width: 390px)"
+            type="image/webp"
+          />
+          <source
+            srcset="assets/vrata-674.webp"
+            media="(max-width: 674px)"
+            type="image/webp"
+          />
           <img
             class="image"
-            src="assets/vrata-xxl.webp"
+            src="assets/vrata-1280x551.webp"
             alt="Vratislav"
           />
         </picture>
